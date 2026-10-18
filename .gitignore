@@ -1,0 +1,20 @@
+# Python & FastAPI
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Node & Vue
+node_modules/
+dist/
+.DS_Store
+
+# 环境变量与本地运行数据
+.env.local
+storage/attachments/*
+!storage/attachments/.gitkeep
+mysql_data/
+EOF
+
+touch storage/attachments/.gitkeep
