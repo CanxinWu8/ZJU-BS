@@ -7,12 +7,11 @@ from sqlalchemy import text
 from app.database import get_db, SessionLocal
 from app import models
 from app.seed import run_seed
-from app.routers import auth
+from app.routers import auth, admin
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # 启动时自动幂等执行种子数据初始化
     with SessionLocal() as db:
         run_seed(db)
     yield
@@ -35,11 +34,11 @@ app.add_middleware(
 
 # 注册路由
 app.include_router(auth.router)
+app.include_router(admin.router)
 
 
 @app.get("/api/v1/health", tags=["System"])
 def health_check(db: Session = Depends(get_db)):
-    """检查后端服务及数据库连接状态"""
     result = db.execute(
         text("SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'approval_system'")
     )
