@@ -25,11 +25,11 @@
           <div class="demo-accounts">
             <div class="demo-title">⚡ 课程演示账号一键切换（密码均为 Zju123456）：</div>
             <div class="demo-grid">
-              <el-button size="small" @click="quickLogin('emp_rnd')">张三(研发员工)</el-button>
-              <el-button size="small" @click="quickLogin('emp_mkt')">李四(市场员工)</el-button>
-              <el-button size="small" type="primary" plain @click="quickLogin('mgr_rnd')">王五(研发经理)</el-button>
-              <el-button size="small" type="success" plain @click="quickLogin('fin_auditor')">周杰(财务审批)</el-button>
-              <el-button size="small" type="warning" plain @click="quickLogin('ceo')">钱总(企业负责)</el-button>
+              <el-button size="small" @click="quickLogin('emp_rnd')">员工 1(研发员工)</el-button>
+              <el-button size="small" @click="quickLogin('emp_mkt')">员工 2(市场员工)</el-button>
+              <el-button size="small" type="primary" plain @click="quickLogin('mgr_rnd')">经理 1(研发经理)</el-button>
+              <el-button size="small" type="success" plain @click="quickLogin('fin_auditor')">经理 3(财务经理)</el-button>
+              <el-button size="small" type="warning" plain @click="quickLogin('ceo')">总管(企业负责人)</el-button>
               <el-button size="small" type="danger" plain @click="quickLogin('admin')">系统管理员</el-button>
             </div>
           </div>
