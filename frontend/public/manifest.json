@@ -1,0 +1,8 @@
+{
+  "name": "企业智能协同审批系统",
+  "short_name": "企业审批",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1e40af"
+}
