@@ -44,12 +44,12 @@ def run_seed(db: Session):
     pwd_hash = hash_password(DEFAULT_PWD)
     users_data = [
         ("admin", "系统管理员", "admin@zju.edu.cn", "DEPT_EXEC", ["ADMIN"]),
-        ("emp_rnd", "张三(研发员工)", "zhangsan@zju.edu.cn", "DEPT_RND", ["EMPLOYEE"]),
-        ("emp_mkt", "李四(市场员工)", "lisi@zju.edu.cn", "DEPT_MKT", ["EMPLOYEE"]),
-        ("mgr_rnd", "王五(研发经理)", "wangwu@zju.edu.cn", "DEPT_RND", ["EMPLOYEE", "DEPT_MANAGER"]),
-        ("mgr_mkt", "赵敏(市场经理)", "zhaomin@zju.edu.cn", "DEPT_MKT", ["EMPLOYEE", "DEPT_MANAGER"]),
-        ("fin_auditor", "周杰(财务经理)", "zhoujie@zju.edu.cn", "DEPT_FIN", ["EMPLOYEE", "DEPT_MANAGER", "FINANCE"]),
-        ("ceo", "钱总(企业负责人)", "ceo@zju.edu.cn", "DEPT_EXEC", ["EMPLOYEE", "DEPT_MANAGER", "EXECUTIVE"]),
+        ("emp_rnd", "员工 1(研发员工)", "emp1@zju.edu.cn", "DEPT_RND", ["EMPLOYEE"]),
+        ("emp_mkt", "员工 2(市场员工)", "emp2@zju.edu.cn", "DEPT_MKT", ["EMPLOYEE"]),
+        ("mgr_rnd", "经理 1(研发经理)", "mgr1@zju.edu.cn", "DEPT_RND", ["EMPLOYEE", "DEPT_MANAGER"]),
+        ("mgr_mkt", "经理 2(市场经理)", "mgr2@zju.edu.cn", "DEPT_MKT", ["EMPLOYEE", "DEPT_MANAGER"]),
+        ("fin_auditor", "经理 3(财务经理)", "mgr3@zju.edu.cn", "DEPT_FIN", ["EMPLOYEE", "DEPT_MANAGER", "FINANCE"]),
+        ("ceo", "总管(企业负责人)", "ceo@zju.edu.cn", "DEPT_EXEC", ["EMPLOYEE", "DEPT_MANAGER", "EXECUTIVE"]),
     ]
     user_map = {}
     for username, real_name, email, dept_code, role_codes in users_data:
