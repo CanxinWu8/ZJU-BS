@@ -7,7 +7,7 @@ from sqlalchemy import text
 from app.database import get_db, SessionLocal
 from app import models
 from app.seed import run_seed
-from app.routers import auth, admin
+from app.routers import auth, admin, attachments
 
 
 @asynccontextmanager
@@ -35,6 +35,7 @@ app.add_middleware(
 # 注册路由
 app.include_router(auth.router)
 app.include_router(admin.router)
+app.include_router(attachments.router)
 
 
 @app.get("/api/v1/health", tags=["System"])
