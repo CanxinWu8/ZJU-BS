@@ -15,6 +15,3 @@ dist/
 storage/attachments/*
 !storage/attachments/.gitkeep
 mysql_data/
-EOF
-
-touch storage/attachments/.gitkeep
